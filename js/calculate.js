@@ -12,8 +12,8 @@ strength.addEventListener('change', calculate);
 
 
 function calculate() {
-    brewVal = brew.value;
-    strengthVal = strength.value;
+    brewVal = parseInt(brew.value);
+    strengthVal = parseInt(strength.value);
     const cof = (brewVal / strengthVal) - absorption.average;
     coffee.innerText = cof.toPrecision(1);
     const wat = (brewVal + absorption.average * cof);
