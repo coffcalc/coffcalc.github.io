@@ -14,15 +14,3 @@ function calculate() {
     coffee.innerText = cof;
     water.innerText = brew + absorption.average * cof;
 };
-
-var title = document.getElementsByTagName('h1')[0];
-
-title.addEventListener('click', () => {
-    title.style.color = "red";
-});
-
-title.addEventListener('click', e => {alert("elo")});
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-});
