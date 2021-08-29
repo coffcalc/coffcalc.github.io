@@ -15,7 +15,7 @@ function calculate() {
     brewVal = parseInt(brew.value);
     strengthVal = parseInt(strength.value);
     const cof = (brewVal / strengthVal) - absorption.average;
-    coffee.innerText = cof.toPrecision(1);
+    coffee.innerText = cof.toFixed(1);
     const wat = (brewVal + absorption.average * cof);
-    water.innerText = wat.toPrecision(1);
+    water.innerText = wat.toFixed(1);
 };
