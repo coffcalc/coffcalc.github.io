@@ -1,4 +1,4 @@
-// import { absorption } from "./constans";
+import { absorption } from "./constans";
 
 const brew = document.getElementById("brew");
 const strength = document.getElementById("strength");
