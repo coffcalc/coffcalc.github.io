@@ -5,8 +5,8 @@ const strength = document.getElementById("strength");
 const coffee = document.getElementById("coffee");
 const water = document.getElementById("water");
 
-brew.addEventListener('input', e => calculate)
-strength.addEventListener('input', e => calculate)
+brew.addEventListener('input', calculate())
+strength.addEventListener('input', calculate())
 
 
 const calculate = () => {
@@ -14,3 +14,9 @@ const calculate = () => {
     coffee.innerText = cof;
     water.innerText = brew + absorption.average * cof;
 }
+
+const title = document.getElementsByTagName('h1')[0];
+
+title.addEventListener('click', e => {
+    title.style.color = "red";
+})
