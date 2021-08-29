@@ -7,8 +7,8 @@ const strengthVal = parseInt(strength.value);
 const coffee = document.getElementById("coffee");
 const water = document.getElementById("water");
 
-brew.addEventListener('input', calculate);
-strength.addEventListener('input', calculate);
+brew.addEventListener('change', calculate);
+strength.addEventListener('change', calculate);
 
 
 function calculate() {
