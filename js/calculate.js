@@ -1,9 +1,9 @@
 import { absorption } from "./constans.js";
 
 const brew = document.getElementById("brew");
-const brewVal = parseInt(brew.nodeValue);
+const brewVal = parseInt(brew.value);
 const strength = document.getElementById("strength");
-const strengthVal = parseInt(strength.nodeValue);
+const strengthVal = parseInt(strength.value);
 const coffee = document.getElementById("coffee");
 const water = document.getElementById("water");
 
