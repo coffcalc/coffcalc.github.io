@@ -15,6 +15,6 @@ function calculate() {
     brewVal = brew.value;
     strengthVal = strength.value;
     const cof = (brewVal / strengthVal) - absorption.average;
-    coffee.innerText = cof;
-    water.innerText = brewVal + absorption.average * cof;
+    coffee.innerText = cof.toFixed(1);
+    water.innerText = (brewVal + absorption.average * cof).toFixed(1);
 };
