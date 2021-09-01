@@ -15,7 +15,9 @@ function calculate() {
     brewVal = parseInt(brew.value);
     strengthVal = parseInt(strength.value);
     const cof = brewVal / (strengthVal - absorption.average);
-    coffee.innerText = Math.round((cof + Number.EPSILON) * 10) / 10;
     const wat = brewVal + absorption.average * cof;
-    water.innerText = Math.round((wat + Number.EPSILON) * 10) / 10;
+    if (!isNaN(cof) && !isNaN(wat)) {
+        coffee.innerText = Math.round((cof + Number.EPSILON) * 10) / 10;
+        water.innerText = Math.round((wat + Number.EPSILON) * 10) / 10;
+    }
 };
