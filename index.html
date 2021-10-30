@@ -10,22 +10,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <h1>Coffee Calculator</h1>
-      <label for="brew">How much coffee do you want</label><br />
-      <input id="brew" type="number"/><br />
-      <label for="strength">How strong coffee do you want</label><br />
-      1 : &nbsp;<input id="strength" type="number"/><br />
-    <div>
+    <button id="brew-btn" class="clicked">Brew</button><button id="coffee-btn">Coffee</button>
+    <div id="brew-input-con">
+      <label for="brew-input">How much coffee do you want?</label><br />
+      <input id="brew-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4"/> ml
+    </div>
+    <div id="coffee-input-con" class="hidden">
+      <label for="coffee-input">How much coffee do you have?</label><br />
+      <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4"/> ml
+    </div>
+    <div id="strength-input-con">
+      <label for="strength-input">How strong coffee do you want?</label><br />
+      1 : &nbsp;<input id="strength-input" type="number"/>
+    </div>    
+    <div id="result-con">
       <p>
         You should use
       </p>
-      <p>
+      <p id="coffee-result-con">
         <span id="coffee">0</span> g of coffee
       </p>
       <p>
         <span id="water">0</span> g of water
       </p>
+      <div id="brew-result-con" class="hidden">
+        <p>
+          You will get
+        </p>
+        <p>
+          <span id="brew"></span> ml of coffee
+        </p>
+      </div>
     </div>
   </body>
 </html>

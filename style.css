@@ -1,5 +1,6 @@
 :root {
-    --text-size-mobile: 20px; 
+    --text-size-mobile: 20px;
+    --background-color: yellowgreen;
 }
 
 
@@ -11,15 +12,35 @@
 }
 
 body {
-    background-color: yellowgreen;
+    background-color: var(--background-color);
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+div {
+    margin: 20px 0 20px 0;
+}
+
+button {
+    border-radius: 10%;
+    border: solid 1px;
+    background-color: transparent;
+    margin: 5px;
+}
+
+.clicked {
+    background-color: black;
+    color: var(--background-color);
+}
+
+.hidden {
+    display: none;
 }
 
 input {
     background-color: transparent;
     border: none;
     border-bottom: solid 1px;
-    width: 30px;
+    width: 40px;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: var(--text-size-mobile);
 }
@@ -30,10 +51,9 @@ input:focus {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
-/* input[id=brew] {
-    max-le
-} */
-
+#result-con {
+    margin-top: 40px;
+}

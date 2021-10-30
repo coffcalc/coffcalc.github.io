@@ -21,3 +21,18 @@ function calculate() {
         water.innerText = Math.round((wat + Number.EPSILON) * 10) / 10;
     }
 };
+
+const brewBtn = document.getElementById("brew-btn");
+const coffeeBtn = document.getElementById("coffee-btn");
+const brewInputCon = document.getElementById("brew-input-con");
+const coffeeInputCon = document.getElementById("coffee-input-con");
+
+brewBtn.addEventListener('click', switchFields);
+coffeeBtn.addEventListener('click', switchFields);
+
+function switchFields() {
+    brewBtn.classList.toggle("clicked");
+    coffeeBtn.classList.toggle("clicked");
+    brewInputCon.classList.toggle("hidden");
+    coffeeInputCon.classList.toggle("hidden");
+};
