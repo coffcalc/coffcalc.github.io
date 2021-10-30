@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Coffee Calculator</title>
-    <script src="js/calculate.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <script src="js/calculate.js" type="module" defer></script>
   </head>
 
   <body>
@@ -20,7 +20,7 @@
     </div>
     <div id="coffee-input-con" class="hidden">
       <label for="coffee-input">How much coffee do you have?</label><br />
-      <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4"/> ml
+      <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4"/> g
     </div>
     <div id="strength-input-con">
       <label for="strength-input">How strong coffee do you want?</label><br />
@@ -41,7 +41,7 @@
           You will get
         </p>
         <p>
-          <span id="brew"></span> ml of coffee
+          <span id="brew">0</span> ml of coffee
         </p>
       </div>
     </div>
