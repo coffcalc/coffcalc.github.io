@@ -1,35 +1,71 @@
 :root {
-    --text-size-mobile: 20px;
+    --text-color: black;
     --background-color: yellowgreen;
 }
 
+/* General styles */
 
-@media (max-width: 500px) {
-    body {
-        font-size: var(--text-size-mobile);
-        text-align: center;
-    }
+html {
+    font-size: 20px;
 }
 
 body {
+    color: var(--text-color);
+    text-align: center;
     background-color: var(--background-color);
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-div {
-    margin: 20px 0 20px 0;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 7em) 1fr;
 }
 
+
+/* Title */
+
+#title {
+    grid-column: 2/4;
+    padding: 0.7rem 0 1.5rem 0;
+}
+
+/* Buttons */
+
 button {
-    border-radius: 10%;
-    border: solid 1px;
+    border-radius: 3px;
+    border: solid 1px black;
     background-color: transparent;
-    margin: 5px;
+    width: 3rem;
 }
 
 .clicked {
     background-color: black;
     color: var(--background-color);
+}
+
+#brew-btn-con {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: end;
+    padding-right: 0.4rem;
+}
+
+#coffee-btn-con {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: start;
+    padding-left: 0.4rem;
+}
+
+
+/* Inputs */
+
+#inputs-con {
+    margin-top: 2rem;
+}
+
+.input-con {
+    grid-column: 2/4;
 }
 
 .hidden {
@@ -41,9 +77,26 @@ input {
     border: none;
     border-radius: 0%;
     border-bottom: solid 1px;
-    width: 40px;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: var(--text-size-mobile);
+    text-align: center;
+}
+
+#strength-input-con {
+    margin-top: 1.5rem;
+}
+
+.input-line {
+    margin-top: 0.4rem;
+}
+
+#brew-input,
+#coffee-input {
+    width: 40px;
+}
+
+#strength-input {
+    width: 35px;
 }
 
 input:focus {
@@ -55,12 +108,80 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-#result-con {
-    margin-top: 40px;
+
+/* Results */
+
+#results-con {
+    margin-top: 2em;
 }
+
+.result-title {
+    margin: 0;
+}
+
+.use-brew {
+    grid-column: 2/4;
+}
+
+#water-result-con {
+    grid-column: 2/3;
+}
+
+#coffee-result-con,
+#brew-result-con {
+    grid-column: 3/4;
+}
+
+.water-result-con-use-brew {
+    display: flex;
+    justify-content: end;
+    padding-right: 1.5rem;
+}
+
+.coffee-result-con-use-brew {
+    display: flex;
+    justify-content: start;
+    padding-left: 1.5rem;
+}
+
+.use-coffee {
+    grid-column: 2/3;
+    margin-right: -1rem;
+}
+
+#get-con {
+    grid-column: 3/4;
+}
+
+.water-result-con-use-coffee {
+    margin-right: -1.5rem;
+}
+
+img {
+    height: 50px;
+}
+
+
+/* Footer */
 
 footer {
     font-size: 0.7em;
     border-top: solid 1px;
     margin-top: 100px;
+}
+
+footer div {
+    margin: 1rem 0 1rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+@media(max-width: 370px) {
+    body {
+        font-size: 18px;
+    }
 }

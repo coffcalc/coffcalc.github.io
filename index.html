@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Coffee Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
-    <script src="js/calculate.js" type="module" defer></script>
-  </head>
 
-  <body>
-    <h1>Coffee Calculator</h1>
-    <button id="brew-btn" class="clicked">Brew</button><button id="coffee-btn">Coffee</button>
-    <div id="brew-input-con">
-      <label for="brew-input">How much coffee do you want?</label><br />
-      <input id="brew-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4"/> ml
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Coffee Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+  <script src="js/calculate.js" type="module" defer></script>
+</head>
+
+<body>
+  <div id="title-con" class="grid">
+    <h1 id="title">Coffee Calculator</h1>
+  </div>
+  <div id="buttons-con" class="grid">
+    <div id="brew-btn-con">
+      <button id="brew-btn" class="clicked">Brew</button>
     </div>
-    <div id="coffee-input-con" class="hidden">
-      <label for="coffee-input">How much coffee do you have?</label><br />
-      <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4"/> g
+    <div id="coffee-btn-con">
+      <button id="coffee-btn">Coffee</button>
     </div>
-    <div id="strength-input-con">
-      <label for="strength-input">How strong coffee do you want?</label><br />
-      1 : &nbsp;<input id="strength-input" type="number"/>
-    </div>    
-    <div id="result-con">
-      <p>
-        You should use
-      </p>
-      <p id="coffee-result-con">
-        <span id="coffee">0</span> g of coffee
-      </p>
-      <p>
-        <span id="water">0</span> g of water
-      </p>
-      <div id="brew-result-con" class="hidden">
-        <p>
-          You will get
-        </p>
-        <p>
-          <span id="brew">0</span> ml of coffee
-        </p>
+  </div>
+  <div id="inputs-con" class="grid">
+    <div id="brew-input-con" class="input-con">
+      <label for="brew-input">How much brew do you want?</label>
+      <div class="input-line">
+        <input id="brew-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" /> g
       </div>
     </div>
-    <footer>
-      <div>About</div>
-      <div>Donate</div>
-      <div>Contact</div>
-    </footer>
-  </body>
+    <div id="coffee-input-con" class="input-con hidden">
+      <label for="coffee-input">How much coffee do you have?</label>
+      <div class="input-line">
+        <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" /> g
+      </div>
+    </div>
+    <div id="strength-input-con" class="input-con">
+      <label for="strength-input">How strong brew do you want?</label>
+      <div class="input-line">
+        1 : <input id="strength-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)"
+        maxlength="4" />
+      </div>
+    </div>
+  </div>
+  <div id="results-con" class="grid">
+    <div id="use-con" class="result-title use-brew">
+      <p>You should use</p>
+    </div>
+    <div id="get-con" class="result-title hidden">
+      <p>You will get</p>
+    </div>
+    <div id="water-result-con" class="water-result-con-use-brew">
+      <div>
+        <img src="./images/water.png">
+        <p><span id="water">0</span> g</p>
+      </div>
+    </div>
+    <div id="coffee-result-con" class="coffee-result-con-use-brew">
+      <div>
+        <img src="./images/coffee.png">
+        <p></p><span id="coffee">0</span> g</p>
+      </div>
+    </div>
+    <div id="brew-result-con" class="hidden">
+      <div>
+        <img src="./images/brew.png">
+        <p><span id="brew">0</span> g</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div><a href="">About</a></div>
+    <div><a href="">Donate</a></div>
+    <div><a href="">Contact</a></div>
+  </footer>
+</body>
+
 </html>
