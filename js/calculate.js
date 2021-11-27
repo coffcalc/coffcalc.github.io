@@ -26,8 +26,8 @@ strength.addEventListener('change', calculateBrew);
 
 
 function calculateBrew() {
-    brewVal = parseInt(brew.value);
-    strengthVal = parseInt(strength.value);
+    brewVal = parseFloat(brew.value);
+    strengthVal = parseFloat(strength.value);
     const cof = brewVal / (strengthVal - absorption.average);
     const wat = brewVal + absorption.average * cof;
     if (!isNaN(cof) && !isNaN(wat) && cof > 0 && wat > 0) {
@@ -68,8 +68,8 @@ function switchFields() {
 };
 
 function calculateCoffee() {
-    const coffeeVal = parseInt(coffeeInput.value);
-    const strengthVal = parseInt(strength.value);
+    const coffeeVal = parseFloat(coffeeInput.value);
+    const strengthVal = parseFloat(strength.value);
     const wat = coffeeVal * strengthVal;
     const brw = wat - absorption.average * coffeeVal;
     if (!isNaN(wat) && !isNaN(brw) && brw > 0) {

@@ -18,7 +18,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, 7em) 1fr;
+    grid-template-columns: 1fr repeat(2, 7.5em) 1fr;
 }
 
 
@@ -35,7 +35,13 @@ button {
     border-radius: 3px;
     border: solid 1px black;
     background-color: transparent;
-    width: 3rem;
+    height: 1.3rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: red;
 }
 
 .clicked {
@@ -43,25 +49,38 @@ button {
     color: var(--background-color);
 }
 
+.sm-btn {
+    width: 4rem;
+}
+
 #brew-btn-con {
     grid-column: 2/3;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 0.4rem;
 }
 
 #coffee-btn-con {
     grid-column: 3/4;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     padding-left: 0.4rem;
+}
+
+#methods-btn-con {
+    grid-column: 2/4;
+    margin-top: 2rem;
+}
+
+#methods-btn {
+    width: 8.8rem;
 }
 
 
 /* Inputs */
 
 #inputs-con {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .input-con {
@@ -108,6 +127,15 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+#calc-btn-con {
+    grid-column: 2/4;
+    margin-top: 2rem;
+}
+
+#calc-btn {
+    width: 5rem;
+}
+
 
 /* Results */
 
@@ -134,13 +162,13 @@ input::-webkit-inner-spin-button {
 
 .water-result-con-use-brew {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 1.5rem;
 }
 
 .coffee-result-con-use-brew {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     padding-left: 1.5rem;
 }
 

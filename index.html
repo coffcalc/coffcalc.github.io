@@ -13,17 +13,27 @@
 </head>
 
 <body>
+  <!-- Title start -->
   <div id="title-con" class="grid">
     <h1 id="title">Coffee Calculator</h1>
   </div>
+  <!-- Title end -->
+
+  <!-- Buttons start -->
   <div id="buttons-con" class="grid">
     <div id="brew-btn-con">
-      <button id="brew-btn" class="clicked">Brew</button>
+      <button id="brew-btn" class="sm-btn clicked">Brew</button>
     </div>
     <div id="coffee-btn-con">
-      <button id="coffee-btn">Coffee</button>
+      <button id="coffee-btn" class="sm-btn">Coffee</button>
+    </div>
+    <div id="methods-btn-con">
+      <button id="methods-btn">Brewing method</button>
     </div>
   </div>
+  <!-- Buttons end -->
+
+  <!-- Inputs start -->
   <div id="inputs-con" class="grid">
     <div id="brew-input-con" class="input-con">
       <label for="brew-input">How much brew do you want?</label>
@@ -44,7 +54,13 @@
         maxlength="4" />
       </div>
     </div>
+    <div id="calc-btn-con">
+      <button id="calc-btn">Calculate</button>
+    </div>
   </div>
+  <!-- Inputs end -->
+
+
   <div id="results-con" class="grid">
     <div id="use-con" class="result-title use-brew">
       <p>You should use</p>
