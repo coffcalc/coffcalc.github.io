@@ -18,7 +18,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, 7.5em) 1fr;
+    grid-template-columns: 1fr repeat(2, minmax(7.5em, auto)) 1fr;
 }
 
 
@@ -35,7 +35,7 @@ button {
     border-radius: 3px;
     border: solid 1px black;
     background-color: transparent;
-    height: 1.3rem;
+    height: 1.2rem;
     font-size: 0.7rem;
     cursor: pointer;
 }
