@@ -37,8 +37,10 @@ body {
 
 button {
     border-radius: 3px;
-    border: solid 1px black;
-    background-color: transparent;
+    /* border: solid 1px black; */
+    /* background-color: transparent; */
+    border: none;
+    background-color: #99ddff;
     height: 1.1rem;
     font-size: 0.65rem;
     cursor: pointer;
@@ -50,7 +52,8 @@ button:focus {
 
 .clicked {
     background-color: black;
-    color: var(--background-color);
+    /* color: var(--background-color); */
+    color: #99ddff;
 }
 
 .sm-btn {
@@ -140,6 +143,7 @@ input::-webkit-inner-spin-button {
     width: 8.8rem;
     height: 1.2rem;
     font-size: 0.75rem;
+    color: #99ddff;
 }
 
 
@@ -193,6 +197,9 @@ input::-webkit-inner-spin-button {
 
 img {
     height: 50px;
+    /* background-color: lightblue; */
+    /* fill: lightblue; */
+    /* color: red; */
 }
 
 

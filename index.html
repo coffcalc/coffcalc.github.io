@@ -9,11 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
-  
+
   <!-- fonts for consideration -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet">
-  
+
   <script src="js/calculate.js" type="module" defer></script>
 </head>
 
@@ -49,14 +49,15 @@
     <div id="coffee-input-con" class="input-con hidden">
       <label for="coffee-input">How much coffee do you have?</label>
       <div class="input-line">
-        <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" /> g
+        <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" />
+        g
       </div>
     </div>
     <div id="strength-input-con" class="input-con">
       <label for="strength-input">How strong brew do you want?</label>
       <div class="input-line">
         1 : <input id="strength-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)"
-        maxlength="4" />
+          maxlength="4" />
       </div>
     </div>
     <div id="calc-btn-con">
@@ -75,13 +76,13 @@
     </div>
     <div id="water-result-con" class="water-result-con-use-brew">
       <div>
-        <img src="./images/water.png">
+        <img src="./images/water.svg">
         <p><span id="water">0</span> g</p>
       </div>
     </div>
     <div id="coffee-result-con" class="coffee-result-con-use-brew">
       <div>
-        <img src="./images/coffee.png">
+        <img src="./images/coffee.svg">
         <p></p><span id="coffee">0</span> g</p>
       </div>
     </div>
