@@ -1,6 +1,8 @@
 :root {
     --text-color: black;
     --background-color: yellowgreen;
+    /* --third-color: #99ddff; */
+    --third-color: #f8d588;
 }
 
 /* General styles */
@@ -40,7 +42,7 @@ button {
     /* border: solid 1px black; */
     /* background-color: transparent; */
     border: none;
-    background-color: #99ddff;
+    background-color: var(--third-color);
     height: 1.1rem;
     font-size: 0.65rem;
     cursor: pointer;
@@ -53,7 +55,7 @@ button:focus {
 .clicked {
     background-color: black;
     /* color: var(--background-color); */
-    color: #99ddff;
+    color: var(--third-color);
 }
 
 .sm-btn {
@@ -143,7 +145,7 @@ input::-webkit-inner-spin-button {
     width: 8.8rem;
     height: 1.2rem;
     font-size: 0.75rem;
-    color: #99ddff;
+    color: var(--third-color);
 }
 
 
@@ -197,9 +199,12 @@ input::-webkit-inner-spin-button {
 
 img {
     height: 50px;
-    /* background-color: lightblue; */
-    /* fill: lightblue; */
-    /* color: red; */
+}
+
+svg {
+    height: 50px;
+    width: 50px;
+    color: var(--third-color);
 }
 
 
