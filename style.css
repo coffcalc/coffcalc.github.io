@@ -28,7 +28,7 @@ body {
 
 #title {
     grid-column: 2/4;
-    padding: 2rem 0 2rem 0;
+    padding: 1.5rem 0 2rem 0;
     font-family: 'Merriweather';
     /* font-weight: 300; */
     /* letter-spacing: 1px; */
@@ -89,7 +89,8 @@ button:focus {
 /* Inputs */
 
 #inputs-con {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
 .input-con {
@@ -138,7 +139,7 @@ input::-webkit-inner-spin-button {
 
 #calc-btn-con {
     grid-column: 2/4;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 #calc-btn {
@@ -153,6 +154,7 @@ input::-webkit-inner-spin-button {
 
 #results-con {
     margin-top: 3.5em;
+    font-size: 1.2rem;
 }
 
 .result-title {

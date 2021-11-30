@@ -1,4 +1,5 @@
 import { absorption } from "./constans.js";
+import { getColor } from "./colors.js";
 
 const brew = document.getElementById("brew-input");
 let brewVal = parseInt(brew.value);
@@ -17,8 +18,7 @@ const coffeeInput = document.getElementById("coffee-input");
 const brewResult = document.getElementById("brew");
 const useCon = document.getElementById("use-con");
 const getCon = document.getElementById("get-con");
-
-let brewOrCoffee = 0;
+const root = document.querySelector(":root");
 
 
 brew.addEventListener('change', calculateBrew);
@@ -76,4 +76,10 @@ function calculateCoffee() {
         water.innerText = Math.round((wat + Number.EPSILON) * 10) / 10;
         brewResult.innerText = Math.round((brw + Number.EPSILON) * 10) / 10;
     }
+}
+
+window.onload = function() {
+    const color = getColor();
+    root.style.setProperty('--background-color', color);
+    console.log(color);
 }
