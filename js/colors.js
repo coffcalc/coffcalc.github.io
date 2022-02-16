@@ -1,11 +1,9 @@
 const colors = [
-    "#9FE5FF",
-    "#F3BFFF",
-    "#FFBFBF",
-    "#BFFFF3",
     "#BFFFC4",
-    "#FFFBBF",
-    "#FFE8BF"
+    "#BDEBFE",
+    "#FFCCCC",
+    "#FFFBB7",
+    "#FFDFA9"
 ];
 
 function getColor() {
