@@ -1,5 +1,5 @@
 import { absorption } from "./constans.js";
-import { getColor } from "./colors.js";
+import { getColors } from "./colors.js";
 
 const brew = document.getElementById("brew-input");
 let brewVal = parseInt(brew.value);
@@ -79,7 +79,7 @@ function calculateCoffee() {
 }
 
 window.onload = function() {
-    const color = getColor();
-    root.style.setProperty('--background-color', color);
-    console.log(color);
+    const colors = getColors();
+    root.style.setProperty('--background-color', colors.background);
+    root.style.setProperty('--third-color-color', colors.buttons);
 }
