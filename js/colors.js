@@ -4,8 +4,8 @@ const colors = [
         buttons : "#FFDDBF"
     },
     {
-        background : "#BDEBFE", //blue   #FFDFBB / #FFECBB!
-        buttons : "#FFECBB"
+        background : "#CBF0FF", //blue       CBF0FF  BDEBFE
+        buttons : "#FFECBB"     // #FFDFBB / #FFECBB!
     },
     {
         background : "#FFD8D8", //pink   #E2EECA

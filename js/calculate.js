@@ -81,5 +81,5 @@ function calculateCoffee() {
 window.onload = function() {
     const colors = getColors();
     root.style.setProperty('--background-color', colors.background);
-    root.style.setProperty('--third-color-color', colors.buttons);
+    root.style.setProperty('--third-color', colors.buttons);
 }
