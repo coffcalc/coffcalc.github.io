@@ -39,17 +39,12 @@ body {
 
 button {
     border-radius: 3px;
-    /* border: solid 1px black; */
-    /* background-color: transparent; */
     border: none;
     background-color: var(--third-color);
     height: 1.1rem;
     font-size: 0.65rem;
     cursor: pointer;
-}
-
-button:focus {
-    outline: red;
+    color: var(--text-color);
 }
 
 .clicked {
