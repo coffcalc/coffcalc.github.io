@@ -1,14 +1,16 @@
 :root {
     --text-color: black;
-    /* --background-color: yellowgreen; */
-    /* --third-color: #99ddff; */
-    /* --third-color: #f8d588; */
+    --background-color: #FFFBB7;
+    --third-color: #FFDFA9;
+    --root-font-size: 20px;
+    --main-font-size: 1.2rem;
 }
 
 /* General styles */
 
 html {
-    font-size: 20px;
+    font-size: var(--root-font-size);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,19 +22,30 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(7.5em, auto)) 1fr;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    /* grid-template-columns: 1fr repeat(2, minmax(6rem, auto)) 1fr; */
+}
+
+.section {
+    height: 100vh;
 }
 
 
 /* Title */
 
+#title-con {
+    padding: 7vh 20% 10vh;
+}
+
 #title {
     grid-column: 2/4;
-    padding: 1.5rem 0 2rem 0;
+    /* padding: 1.5rem 0 2rem 0; */
+    
     font-family: 'Merriweather';
     /* font-weight: 300; */
     /* letter-spacing: 1px; */
-    /* font-size: 2.5rem; */
+    font-size: 1.7rem;
+    margin: 0;
 }
 
 /* Buttons */
@@ -41,7 +54,7 @@ button {
     border-radius: 3px;
     border: none;
     background-color: var(--third-color);
-    height: 1.1rem;
+    height: 1.2rem;
     font-size: 0.65rem;
     cursor: pointer;
     color: var(--text-color);
@@ -54,38 +67,37 @@ button {
 }
 
 .sm-btn {
-    width: 4rem;
+    width: 4.5rem;
 }
 
 #brew-btn-con {
     grid-column: 2/3;
     display: flex;
     justify-content: flex-end;
-    padding-right: 0.4rem;
+    padding-right: 3vw;
 }
 
 #coffee-btn-con {
     grid-column: 3/4;
     display: flex;
     justify-content: flex-start;
-    padding-left: 0.4rem;
+    padding-left: 3vw;
 }
 
-#methods-btn-con {
+/* #methods-btn-con {
     grid-column: 2/4;
     margin-top: 0.8rem;
 }
 
 #methods-btn {
     width: 8.8rem;
-}
+} */
 
 
 /* Inputs */
 
 #inputs-con {
-    margin-top: 2rem;
-    font-size: 1.2rem;
+    margin-top: 12vh;
 }
 
 .input-con {
@@ -102,8 +114,10 @@ input {
     border-radius: 0%;
     border-bottom: solid 1px;
     font-family: 'Roboto Condensed', sans-serif;
-    /* font-size: var(--text-size-mobile); */
     text-align: center;
+    font-size: var(--root-font-size);
+    padding: 0;
+    padding-bottom: 5px;
 }
 
 #strength-input-con {
@@ -120,7 +134,7 @@ input {
 }
 
 #strength-input {
-    width: 35px;
+    width: 40px;
 }
 
 input:focus {
@@ -132,14 +146,14 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-#calc-btn-con {
+#calculate-btn-con {
     grid-column: 2/4;
-    margin-top: 2rem;
+    margin-top: 10vh;
 }
 
-#calc-btn {
+#calculate-btn {
     width: 8.8rem;
-    height: 1.2rem;
+    height: var(--main-font-size);
     font-size: 0.75rem;
     color: var(--third-color);
 }
@@ -147,17 +161,24 @@ input::-webkit-inner-spin-button {
 
 /* Results */
 
+#results {
+    /* min-height: 60%; */
+    
+}
+
 #results-con {
-    margin-top: 3.5em;
-    font-size: 1.2rem;
+    /* margin-top: 3.5em; */
+    font-size: var(--main-font-size);
+    padding-top: 25vh;
 }
 
 .result-title {
-    margin: 0;
+    /* margin-bottom: 1rem; */
 }
 
 .use-brew {
     grid-column: 2/4;
+    /* height: 3rem; */
 }
 
 #water-result-con {
@@ -184,14 +205,15 @@ input::-webkit-inner-spin-button {
 .use-coffee {
     grid-column: 2/3;
     margin-right: -1rem;
+    margin-left: -1rem;
 }
 
-#get-con {
+#will-get {
     grid-column: 3/4;
 }
 
 .water-result-con-use-coffee {
-    margin-right: -1.5rem;
+    /* margin-right: 1.5rem; */
 }
 
 img {
@@ -207,10 +229,19 @@ svg {
 
 /* Footer */
 
+#second-section {
+    position: relative;
+}
+
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     font-size: 0.7em;
     border-top: solid 1px;
-    margin-top: 100px;
+    padding-top: 0.5rem;
+    /* margin-top: 100px; */
+    /* max-height: 9rem; */
 }
 
 footer div {

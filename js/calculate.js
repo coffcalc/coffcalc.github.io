@@ -1,85 +1,136 @@
 import { absorption } from "./constans.js";
 import { getColors } from "./colors.js";
 
-const brew = document.getElementById("brew-input");
-let brewVal = parseInt(brew.value);
-const strength = document.getElementById("strength-input");
-let strengthVal = parseInt(strength.value);
-const coffee = document.getElementById("coffee");
-const water = document.getElementById("water");
 const brewBtn = document.getElementById("brew-btn");
 const coffeeBtn = document.getElementById("coffee-btn");
+
+const brewInput = document.getElementById("brew-input");
+const strengthInput = document.getElementById("strength-input");
+const coffeeInput = document.getElementById("coffee-input");
+
+const coffeeResult = document.getElementById("coffee-result");
+const waterResult = document.getElementById("water-result");
+const brewResult = document.getElementById("brew-result");
+
 const brewInputCon = document.getElementById("brew-input-con");
 const coffeeInputCon = document.getElementById("coffee-input-con");
+
 const coffeeResultCon = document.getElementById("coffee-result-con");
 const brewResultCon = document.getElementById("brew-result-con");
 const waterResultCon = document.getElementById("water-result-con");
-const coffeeInput = document.getElementById("coffee-input");
-const brewResult = document.getElementById("brew");
-const useCon = document.getElementById("use-con");
-const getCon = document.getElementById("get-con");
+
+
+const calculateBtn = document.getElementById("calculate-btn");
+const scrollDown = document.getElementsByTagName("footer")[0];
+
+const shouldUse = document.getElementById("should-use");
+const willGet = document.getElementById("will-get");
 const root = document.querySelector(":root");
 
 
-brew.addEventListener('change', calculateBrew);
-strength.addEventListener('change', calculateBrew);
+brewInput.addEventListener('change', calculateBrew);
+strengthInput.addEventListener('change', calculateBrew);
+coffeeInput.addEventListener('change', calculateCoffee);
+strengthInput.addEventListener('change', calculateCoffee);
 
+calculateBtn.addEventListener('click', calculate);
+calculateBtn.addEventListener('click', scrollDown.scrollIntoView);
+
+function calculate() {
+    if (brewBtn.classList.contains("clicked")) {
+        calculateBrew();
+    } else {
+        calculateCoffee();
+    }
+}
 
 function calculateBrew() {
-    brewVal = parseFloat(brew.value);
-    strengthVal = parseFloat(strength.value);
-    const cof = brewVal / (strengthVal - absorption.average);
-    const wat = brewVal + absorption.average * cof;
-    if (!isNaN(cof) && !isNaN(wat) && cof > 0 && wat > 0) {
-        coffee.innerText = Math.round((cof + Number.EPSILON) * 10) / 10;
-        water.innerText = Math.round((wat + Number.EPSILON) * 10) / 10;
+    // brewValue = parseFloat(brew.value);
+    const brewValue = parseFloat(brewInput.value);
+    const strengthValue = parseFloat(strengthInput.value);
+    const coffee = brewValue / (strengthValue - absorption.average);
+    const water = brewValue + absorption.average * coffee;
+    if (!isNaN(coffee) && !isNaN(water) && coffee > 0 && water > 0) {
+        coffeeResult.innerText = Math.round((coffee + Number.EPSILON) * 10) / 10;
+        waterResult.innerText = Math.round((water + Number.EPSILON) * 10) / 10;
     } else {
-        coffee.innerText = 0;
-        water.innerText = 0;
+        coffeeResult.innerText = 0;
+        waterResult.innerText = 0;
     }
 };
 
-
-brewBtn.addEventListener('click', switchFields);
-coffeeBtn.addEventListener('click', switchFields);
-coffeeInput.addEventListener('change', calculateCoffee);
-strength.addEventListener('change', calculateCoffee);
-
-function switchFields() {
-    brewBtn.classList.toggle("clicked");
-    coffeeBtn.classList.toggle("clicked");
-    brewInputCon.classList.toggle("hidden");
-    coffeeInputCon.classList.toggle("hidden");
-    waterResultCon.classList.toggle("water-result-con-use-brew");
-    waterResultCon.classList.toggle("water-result-con-use-coffee");
-    coffeeResultCon.classList.toggle("hidden")
-    coffeeResultCon.classList.toggle("coffee-result-con-use-brew")
-    brewResultCon.classList.toggle("hidden");
-    brewResultCon.classList.toggle("brew-result-con-use-coffee");
-    useCon.classList.toggle("use-brew");
-    useCon.classList.toggle("use-coffee");
-    getCon.classList.toggle("hidden");
-    brew.value = "";
-    strength.value = "";
-    coffeeInput.value = "";
-    coffee.innerText = 0;
-    water.innerText = 0;
-    brewResult.innerText = 0;
-};
 
 function calculateCoffee() {
-    const coffeeVal = parseFloat(coffeeInput.value);
-    const strengthVal = parseFloat(strength.value);
-    const wat = coffeeVal * strengthVal;
-    const brw = wat - absorption.average * coffeeVal;
-    if (!isNaN(wat) && !isNaN(brw) && brw > 0) {
-        water.innerText = Math.round((wat + Number.EPSILON) * 10) / 10;
-        brewResult.innerText = Math.round((brw + Number.EPSILON) * 10) / 10;
+    const coffeeValue = parseFloat(coffeeInput.value);
+    const strengthValue = parseFloat(strengthInput.value);
+    const water = coffeeValue * strengthValue;
+    const brew = water - absorption.average * coffeeValue;
+    if (!isNaN(water) && !isNaN(brew) && brew > 0) {
+        waterResult.innerText = Math.round((water + Number.EPSILON) * 10) / 10;
+        brewResult.innerText = Math.round((brew + Number.EPSILON) * 10) / 10;
     }
+};
+
+brewBtn.addEventListener('click', switchToBrew);
+coffeeBtn.addEventListener('click', switchToCoffee);
+
+
+function switchToBrew() {
+    brewBtn.classList.add("clicked");
+    coffeeBtn.classList.remove("clicked");
+
+    coffeeInputCon.classList.add("hidden");
+    brewInputCon.classList.remove("hidden");
+
+    waterResultCon.classList.add("water-result-con-use-brew");
+    waterResultCon.classList.remove("water-result-con-use-coffee");
+
+    brewResultCon.classList.add("hidden");
+    coffeeResultCon.classList.remove("hidden");
+    brewResultCon.classList.remove("brew-result-con-use-coffee");
+    coffeeResultCon.classList.add("coffee-result-con-use-brew")
+    shouldUse.classList.add("use-brew");
+    shouldUse.classList.remove("use-coffee");
+    willGet.classList.add("hidden");
+
+    brewInput.value = "";
+    strengthInput.value = "";
+    coffeeInput.value = "";
+
+    coffeeResult.innerText = 0;
+    waterResult.innerText = 0;
+    brewResult.innerText = 0;
+}
+
+function switchToCoffee() {
+    coffeeBtn.classList.add("clicked");
+    brewBtn.classList.remove("clicked");
+
+    brewInputCon.classList.add("hidden");
+    coffeeInputCon.classList.remove("hidden");
+
+    waterResultCon.classList.add("water-result-con-use-coffee");
+    waterResultCon.classList.remove("water-result-con-use-brew");
+
+    coffeeResultCon.classList.add("hidden");
+    brewResultCon.classList.remove("hidden");
+    brewResultCon.classList.add("brew-result-con-use-coffee");
+    coffeeResultCon.classList.remove("coffee-result-con-use-brew")
+    shouldUse.classList.remove("use-brew");
+    shouldUse.classList.add("use-coffee");
+    willGet.classList.remove("hidden");
+
+    brewInput.value = "";
+    strengthInput.value = "";
+    coffeeInput.value = "";
+
+    coffeeResult.innerText = 0;
+    waterResult.innerText = 0;
+    brewResult.innerText = 0;
 }
 
 window.onload = function() {
     const colors = getColors();
     root.style.setProperty('--background-color', colors.background);
-    root.style.setProperty('--third-color', colors.buttons);
-}
+    root.style.setProperty('--third-color', colors.thirdColor);
+};

@@ -1,23 +1,39 @@
-const colors = [
+const backgroundColors = {
+    green : "#BFFFC4",
+    blue : "#CBF0FF",
+    pink : "#FFD8D8",
+    yellow : "#FFFBB7",
+    orange : "#FFDFA9"
+}
+
+const thirdColors = {
+    orangeForGreen : "#FFDDBF",
+    yellowForBlue : "#FFECBB",
+    greenForPink : "#E2EECA",
+    orangeForYellow : "#FFDFA9",
+    greenForOrange : "#DAF0DB"
+}
+
+const palletes = [
     {
-        background : "#BFFFC4", //green  #FFDDBF
-        buttons : "#FFDDBF"
+        background : backgroundColors.green,
+        thirdColor : thirdColors.orangeForGreen
     },
     {
-        background : "#CBF0FF", //blue       CBF0FF  BDEBFE
-        buttons : "#FFECBB"     // #FFDFBB / #FFECBB!
+        background : backgroundColors.blue,
+        thirdColor : thirdColors.yellowForBlue
     },
     {
-        background : "#FFD8D8", //pink   #E2EECA
-        buttons : "#E2EECA"
+        background : backgroundColors.pink,
+        thirdColor : thirdColors.greenForPink
     },
     {
-        background : "#FFFBB7", //yellow #D3FCF3 / #FFDFA9
-        buttons : "#FFDFA9"
+        background : backgroundColors.yellow,
+        thirdColor : thirdColors.orangeForYellow
     },
     {
-        background : "#FFDFA9", //orange  #DAF0DB
-        buttons : "#DAF0DB"
+        background : backgroundColors.orange,
+        thirdColor : thirdColors.greenForOrange
     }
 ]
 

@@ -18,106 +18,113 @@
 </head>
 
 <body>
-  <!-- Title start -->
-  <div id="title-con" class="grid">
-    <h1 id="title">Coffee Calculator</h1>
+  <div class="section">
+    <!-- Title start -->
+    <div id="title-con" class="grid">
+      <h1 id="title">Coffee Calculator</h1>
+    </div>
+    <!-- Title end -->
+
+    <!-- Buttons start -->
+    <div id="buttons-con" class="grid">
+      <div id="brew-btn-con">
+        <button id="brew-btn" class="sm-btn clicked">Brew</button>
+      </div>
+      <div id="coffee-btn-con">
+        <button id="coffee-btn" class="sm-btn">Coffee</button>
+      </div>
+      <!-- <div id="methods-btn-con">
+        <button id="methods-btn">Brewing method</button>
+      </div> -->
+    </div>
+    <!-- Buttons end -->
+
+    <!-- Inputs start -->
+    <div id="inputs-con" class="grid">
+      <div id="brew-input-con" class="input-con">
+        <label for="brew-input">How much brew do you want?</label>
+        <div class="input-line">
+          <input id="brew-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" /> g
+        </div>
+      </div>
+      <div id="coffee-input-con" class="input-con hidden">
+        <label for="coffee-input">How much coffee do you have?</label>
+        <div class="input-line">
+          <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" />
+          g
+        </div>
+      </div>
+      <div id="strength-input-con" class="input-con">
+        <label for="strength-input">How strong brew do you want?</label>
+        <div class="input-line">
+          1 : <input id="strength-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)"
+            maxlength="4" />
+        </div>
+      </div>
+      <div id="calculate-btn-con">
+        <a href="#footer"><button id="calculate-btn" class="btn clicked" href="#results">Calculate</button></a>
+      </div>
+    </div>
+    <!-- Inputs end -->
   </div>
-  <!-- Title end -->
 
-  <!-- Buttons start -->
-  <div id="buttons-con" class="grid">
-    <div id="brew-btn-con">
-      <button id="brew-btn" class="sm-btn clicked">Brew</button>
+  <div id="second-section" class="section">
+    <!-- Results start -->
+    <div id="results">
+      <div id="results-con" class="grid">
+        <!-- <div id="results-title-con" class="grid"> -->
+          <div id="should-use" class="result-title use-brew">
+            <p>You should use</p>
+          </div>
+          <div id="will-get" class="result-title hidden">
+            <p>You will get</p>
+          </div>
+        <!-- </div> -->
+        <div id="water-result-con" class="water-result-con-use-brew">
+          <div>
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+              width="348.000000pt" height="474.000000pt" viewBox="0 0 348.000000 474.000000"
+              preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,474.000000) scale(0.100000,-0.100000)"
+              fill="currentColor" stroke="currentColor">
+              <path d="M1693 4704 c-42 -21 -389 -374 -539 -549 -527 -617 -872 -1214 -1029
+              -1783 -45 -167 -71 -316 -85 -495 -55 -702 307 -1349 930 -1666 763 -388 1691
+              -151 2178 557 258 374 350 840 266 1337 -110 651 -500 1377 -1122 2088 -151
+              173 -468 493 -507 511 -41 20 -52 20 -92 0z m183 -376 c667 -693 1120 -1420
+              1284 -2063 56 -221 74 -371 67 -579 -7 -239 -45 -400 -141 -601 -248 -518
+              -768 -845 -1346 -845 -509 0 -965 246 -1247 672 -230 349 -298 758 -202 1230
+              136 674 605 1452 1323 2195 65 68 122 123 126 123 4 0 65 -60 136 -132z"/>
+              <path d="M523 1825 c-64 -27 -76 -96 -48 -275 29 -194 93 -362 201 -527 110
+              -170 387 -413 471 -413 72 0 122 55 109 122 -7 40 -26 59 -111 114 -78 50
+              -230 202 -285 283 -103 154 -162 323 -182 524 -12 124 -23 152 -73 173 -41 17
+              -42 17 -82 -1z"/>
+              </g>
+              </svg>
+            <p><span id="water-result">0</span> g</p>
+          </div>
+        </div>
+        <div id="coffee-result-con" class="coffee-result-con-use-brew">
+          <div>
+            <img src="./images/coffee.svg">
+            <p></p><span id="coffee-result">0</span> g</p>
+          </div>
+        </div>
+        <div id="brew-result-con" class="hidden">
+          <div>
+            <img src="./images/brew.png">
+            <p><span id="brew-result">0</span> g</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="coffee-btn-con">
-      <button id="coffee-btn" class="sm-btn">Coffee</button>
-    </div>
-    <div id="methods-btn-con">
-      <button id="methods-btn">Brewing method</button>
-    </div>
+    <!-- Results end -->
+
+    <footer id="footer">
+      <div><a href="">About</a></div>
+      <div><a href="">Donate</a></div>
+      <div><a href="">Contact</a></div>
+    </footer>
   </div>
-  <!-- Buttons end -->
-
-  <!-- Inputs start -->
-  <div id="inputs-con" class="grid">
-    <div id="brew-input-con" class="input-con">
-      <label for="brew-input">How much brew do you want?</label>
-      <div class="input-line">
-        <input id="brew-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" /> g
-      </div>
-    </div>
-    <div id="coffee-input-con" class="input-con hidden">
-      <label for="coffee-input">How much coffee do you have?</label>
-      <div class="input-line">
-        <input id="coffee-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" />
-        g
-      </div>
-    </div>
-    <div id="strength-input-con" class="input-con">
-      <label for="strength-input">How strong brew do you want?</label>
-      <div class="input-line">
-        1 : <input id="strength-input" type="number" oninput="this.value=this.value.slice(0,this.maxLength)"
-          maxlength="4" />
-      </div>
-    </div>
-    <div id="calc-btn-con">
-      <button id="calc-btn" class="clicked">Calculate</button>
-    </div>
-  </div>
-  <!-- Inputs end -->
-
-  <!-- Results start -->
-  <div id="results-con" class="grid">
-    <div id="use-con" class="result-title use-brew">
-      <p>You should use</p>
-    </div>
-    <div id="get-con" class="result-title hidden">
-      <p>You will get</p>
-    </div>
-    <div id="water-result-con" class="water-result-con-use-brew">
-      <div>
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="348.000000pt" height="474.000000pt" viewBox="0 0 348.000000 474.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,474.000000) scale(0.100000,-0.100000)"
-fill="currentColor" stroke="currentColor">
-<path d="M1693 4704 c-42 -21 -389 -374 -539 -549 -527 -617 -872 -1214 -1029
--1783 -45 -167 -71 -316 -85 -495 -55 -702 307 -1349 930 -1666 763 -388 1691
--151 2178 557 258 374 350 840 266 1337 -110 651 -500 1377 -1122 2088 -151
-173 -468 493 -507 511 -41 20 -52 20 -92 0z m183 -376 c667 -693 1120 -1420
-1284 -2063 56 -221 74 -371 67 -579 -7 -239 -45 -400 -141 -601 -248 -518
--768 -845 -1346 -845 -509 0 -965 246 -1247 672 -230 349 -298 758 -202 1230
-136 674 605 1452 1323 2195 65 68 122 123 126 123 4 0 65 -60 136 -132z"/>
-<path d="M523 1825 c-64 -27 -76 -96 -48 -275 29 -194 93 -362 201 -527 110
--170 387 -413 471 -413 72 0 122 55 109 122 -7 40 -26 59 -111 114 -78 50
--230 202 -285 283 -103 154 -162 323 -182 524 -12 124 -23 152 -73 173 -41 17
--42 17 -82 -1z"/>
-</g>
-</svg>
-        <p><span id="water">0</span> g</p>
-      </div>
-    </div>
-    <div id="coffee-result-con" class="coffee-result-con-use-brew">
-      <div>
-        <img src="./images/coffee.svg">
-        <p></p><span id="coffee">0</span> g</p>
-      </div>
-    </div>
-    <div id="brew-result-con" class="hidden">
-      <div>
-        <img src="./images/brew.png">
-        <p><span id="brew">0</span> g</p>
-      </div>
-    </div>
-  </div>
-  <!-- Results end -->
-
-  <footer>
-    <div><a href="">About</a></div>
-    <div><a href="">Donate</a></div>
-    <div><a href="">Contact</a></div>
-  </footer>
 </body>
 
 </html>
