@@ -54,7 +54,7 @@ button {
     border-radius: 3px;
     border: none;
     background-color: var(--third-color);
-    height: 1.2rem;
+    height: 1.3rem;
     font-size: 0.65rem;
     cursor: pointer;
     color: var(--text-color);
@@ -93,11 +93,23 @@ button {
     width: 8.8rem;
 } */
 
+#calculate-btn-con {
+    grid-column: 2/4;
+    margin-top: 8vh;
+}
+
+#calculate-btn {
+    width: 8.8rem;
+    height: var(--main-font-size);
+    font-size: 0.75rem;
+    color: var(--third-color);
+}
+
 
 /* Inputs */
 
 #inputs-con {
-    margin-top: 12vh;
+    margin-top: 9vh;
 }
 
 .input-con {
@@ -130,11 +142,11 @@ input {
 
 #brew-input,
 #coffee-input {
-    width: 40px;
+    width: 45px;
 }
 
 #strength-input {
-    width: 40px;
+    width: 45px;
 }
 
 input:focus {
@@ -144,18 +156,6 @@ input:focus {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-}
-
-#calculate-btn-con {
-    grid-column: 2/4;
-    margin-top: 10vh;
-}
-
-#calculate-btn {
-    width: 8.8rem;
-    height: var(--main-font-size);
-    font-size: 0.75rem;
-    color: var(--third-color);
 }
 
 
