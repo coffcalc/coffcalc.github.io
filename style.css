@@ -34,13 +34,12 @@ body {
 /* Title */
 
 #title-con {
-    padding: 7vh 20% 10vh;
+    padding: 7vh 10% 7vh;
 }
 
 #title {
     grid-column: 2/4;
     /* padding: 1.5rem 0 2rem 0; */
-    
     font-family: 'Merriweather';
     /* font-weight: 300; */
     /* letter-spacing: 1px; */
@@ -95,7 +94,7 @@ button {
 
 #calculate-btn-con {
     grid-column: 2/4;
-    margin-top: 8vh;
+    margin-top: 7vh;
 }
 
 #calculate-btn {
@@ -109,7 +108,7 @@ button {
 /* Inputs */
 
 #inputs-con {
-    margin-top: 9vh;
+    margin-top: 7vh;
 }
 
 .input-con {
