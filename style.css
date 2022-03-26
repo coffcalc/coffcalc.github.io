@@ -4,6 +4,7 @@
     --third-color: #FFDFA9;
     --root-font-size: 20px;
     --main-font-size: 1.2rem;
+    --sm-btn-padding: 0.6rem;
 }
 
 /* General styles */
@@ -72,14 +73,14 @@ button {
     grid-column: 2/3;
     display: flex;
     justify-content: flex-end;
-    padding-right: 3vw;
+    padding-right: var(--sm-btn-padding);
 }
 
 #coffee-btn-con {
     grid-column: 3/4;
     display: flex;
     justify-content: flex-start;
-    padding-left: 3vw;
+    padding-left: var(--sm-btn-padding);
 }
 
 /* #methods-btn-con {
@@ -97,7 +98,7 @@ button {
 }
 
 #calculate-btn {
-    width: 8.8rem;
+    width: 9.7rem;
     height: 1.4rem;
     font-size: 0.75rem;
     color: var(--third-color);
