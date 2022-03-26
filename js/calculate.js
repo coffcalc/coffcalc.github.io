@@ -39,7 +39,9 @@ strengthInput.addEventListener('change', calculateCoffee);
 
 calculateBtn.addEventListener('click', calculate);
 // smoothscroll.polyfill();
-calculateBtn.addEventListener('click', scrollDown.scrollIntoView({behavior : "smooth"}));
+// calculateBtn.addEventListener('click', scrollDown.scrollIntoView({behavior : "smooth"}));
+calculateBtn.addEventListener('click', scrollDown.scrollIntoView());
+
 // calculateBtn.addEventListener('click', window.scroll({bottom: 0, behavior : "smooth"}));
 
 // polyfill();
