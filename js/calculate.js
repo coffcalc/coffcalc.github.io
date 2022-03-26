@@ -1,5 +1,9 @@
 import { absorption } from "./constans.js";
 import { getColors } from "./colors.js";
+// import { elementScrollIntoView } from "seamless-scroll-polyfill";
+// import { polyfill } from "seamless-scroll-polyfill";
+// import { smoothscroll } from 'smoothscroll-polyfill';
+// import { smoothscrollPolyfill } from 'smoothscroll-polyfill';
 
 const brewBtn = document.getElementById("brew-btn");
 const coffeeBtn = document.getElementById("coffee-btn");
@@ -34,7 +38,15 @@ coffeeInput.addEventListener('change', calculateCoffee);
 strengthInput.addEventListener('change', calculateCoffee);
 
 calculateBtn.addEventListener('click', calculate);
-calculateBtn.addEventListener('click', scrollDown.scrollIntoView);
+// smoothscroll.polyfill();
+calculateBtn.addEventListener('click', scrollDown.scrollIntoView({behavior : "smooth"}));
+// calculateBtn.addEventListener('click', window.scroll({bottom: 0, behavior : "smooth"}));
+
+// polyfill();
+
+// // calculateBtn.addEventListener('click', window.scrollTo(scrollDown, {behavior: "smooth"}));
+// calculateBtn.addEventListener('click', window.scrollTo({bottom: 0, behavior: "smooth"}));
+
 
 function calculate() {
     if (brewBtn.classList.contains("clicked")) {

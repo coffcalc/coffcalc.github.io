@@ -38,7 +38,7 @@ const palletes = [
 ]
 
 function getColors() {
-    return colors[Math.floor(Math.random() * colors.length)];
+    return palletes[Math.floor(Math.random() * palletes.length)];
 }
 
 export {getColors};

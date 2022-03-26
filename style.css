@@ -53,20 +53,19 @@ button {
     border-radius: 3px;
     border: none;
     background-color: var(--third-color);
-    height: 1.3rem;
-    font-size: 0.65rem;
     cursor: pointer;
     color: var(--text-color);
 }
 
 .clicked {
     background-color: black;
-    /* color: var(--background-color); */
     color: var(--third-color);
 }
 
 .sm-btn {
     width: 4.5rem;
+    height: 1.3rem;
+    font-size: 0.7rem;
 }
 
 #brew-btn-con {
@@ -99,9 +98,10 @@ button {
 
 #calculate-btn {
     width: 8.8rem;
-    height: var(--main-font-size);
+    height: 1.4rem;
     font-size: 0.75rem;
     color: var(--third-color);
+    background-color: black;
 }
 
 
