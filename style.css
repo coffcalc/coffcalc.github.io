@@ -24,7 +24,6 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr 4fr 4fr 1fr;
-    /* grid-template-columns: 1fr repeat(2, minmax(6rem, auto)) 1fr; */
 }
 
 .section {
@@ -110,6 +109,7 @@ button {
 
 #inputs-con {
     margin-top: 7vh;
+    font-size: 1.2rem;
 }
 
 .input-con {
@@ -127,7 +127,7 @@ input {
     border-bottom: solid 1px;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
-    font-size: 1.1rem;
+    /* font-size: 1.2rem; */
     padding: 0;
     padding-bottom: 5px;
 }
