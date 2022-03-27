@@ -1,4 +1,4 @@
-import { absorption } from "./constans.js";
+import { absorption } from "./constants.js";
 import { getColors } from "./colors.js";
 // import { elementScrollIntoView } from "seamless-scroll-polyfill";
 // import { polyfill } from "seamless-scroll-polyfill";
@@ -23,9 +23,8 @@ const coffeeResultCon = document.getElementById("coffee-result-con");
 const brewResultCon = document.getElementById("brew-result-con");
 const waterResultCon = document.getElementById("water-result-con");
 
-
 const calculateBtn = document.getElementById("calculate-btn");
-const scrollDown = document.getElementsByTagName("footer")[0];
+// const scrollDown = document.getElementById("footer");
 
 const shouldUse = document.getElementById("should-use");
 const willGet = document.getElementById("will-get");
@@ -39,10 +38,8 @@ strengthInput.addEventListener('change', calculateCoffee);
 
 calculateBtn.addEventListener('click', calculate);
 // smoothscroll.polyfill();
-// calculateBtn.addEventListener('click', scrollDown.scrollIntoView({behavior : "smooth"}));
-calculateBtn.addEventListener('click', scrollDown.scrollIntoView());
+// calculateBtn.addEventListener('click', scrollDown.scrollIntoView);
 
-// calculateBtn.addEventListener('click', window.scroll({bottom: 0, behavior : "smooth"}));
 
 // polyfill();
 
@@ -59,7 +56,6 @@ function calculate() {
 }
 
 function calculateBrew() {
-    // brewValue = parseFloat(brew.value);
     const brewValue = parseFloat(brewInput.value);
     const strengthValue = parseFloat(strengthInput.value);
     const coffee = brewValue / (strengthValue - absorption.average);
