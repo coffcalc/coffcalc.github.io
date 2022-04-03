@@ -1,10 +1,12 @@
 :root {
     --text-color: black;
+    --black: #2D2F31;
     --background-color: #FFFBB7;
     --third-color: #FFDFA9;
     --root-font-size: 20px;
     --main-font-size: 1.2rem;
     --sm-btn-padding: 0.6rem;
+    --inputs-font-size: 1.1rem;
 }
 
 /* General styles */
@@ -15,7 +17,7 @@ html {
 }
 
 body {
-    color: var(--text-color);
+    color: var(--black);
     text-align: center;
     background-color: var(--background-color);
     font-family: 'Roboto Condensed', sans-serif;
@@ -54,11 +56,11 @@ button {
     border: none;
     background-color: var(--third-color);
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--black);
 }
 
 .clicked {
-    background-color: black;
+    background-color: var(--black);
     color: var(--third-color);
 }
 
@@ -101,7 +103,10 @@ button {
     height: 1.4rem;
     font-size: 0.75rem;
     color: var(--third-color);
-    background-color: black;
+    /* background-color: #282e38; */
+    background-color: var(--black);
+    /* color: black;
+    background-color: var(--third-color); */
 }
 
 
@@ -109,7 +114,7 @@ button {
 
 #inputs-con {
     margin-top: 7vh;
-    font-size: 1.1rem;
+    font-size: var(--inputs-font-size);
 }
 
 .input-con {
@@ -127,7 +132,7 @@ input {
     border-bottom: solid 1px;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
-    /* font-size: 1.2rem; */
+    font-size: var(--inputs-font-size);
     padding: 0;
     padding-bottom: 5px;
 }
@@ -161,24 +166,13 @@ input::-webkit-inner-spin-button {
 
 /* Results */
 
-#results {
-    /* min-height: 60%; */
-    
-}
-
 #results-con {
-    /* margin-top: 3.5em; */
     font-size: var(--main-font-size);
     padding-top: 25vh;
 }
 
-.result-title {
-    /* margin-bottom: 1rem; */
-}
-
 .use-brew {
     grid-column: 2/4;
-    /* height: 3rem; */
 }
 
 #water-result-con {
@@ -212,10 +206,6 @@ input::-webkit-inner-spin-button {
     grid-column: 3/4;
 }
 
-.water-result-con-use-coffee {
-    /* margin-right: 1.5rem; */
-}
-
 img {
     height: 50px;
 }
@@ -240,8 +230,6 @@ footer {
     font-size: 0.7em;
     border-top: solid 1px;
     padding-top: 0.5rem;
-    /* margin-top: 100px; */
-    /* max-height: 9rem; */
 }
 
 footer div {
@@ -250,7 +238,7 @@ footer div {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--black);
 }
 
 
